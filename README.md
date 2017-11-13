@@ -1,11 +1,14 @@
-# Full Stack JS Project - DevJobs - 02 - Express Router + EJS Views
+# Full Stack JS Project
+**DevJobs-02**
+
+**Express Router**
 
 ## Context
 You are going to build a full stack web application with node.js + React. In order to become familiar with how a node project works, you will be responsible for configuring the  initial major components of the project.  
 
 - express server
 - **application routes [this assignment]**
-- **views**
+- views
 - api layer
   - data access
   - data models (ORM)
@@ -15,21 +18,21 @@ You are going to build a full stack web application with node.js + React. In ord
 ## The Assignment
 For this assignment, we will focus on creating the **express router** and the **express views**.
 
-**Overview**
+#### Overview
+
 - Configure the express router to serve the following routes:
   ```
-  /                  : home.html
-  /about             : about.html
+  /                  : '<h1>HOME page</h1>'
+  /about             : '<h1>ABOUT Page</h1>'
   /api/jobs          : json - jobsData
   /api/companies     : json - companies
 
-  * No Match *       : 404.html
+  * No Match *       : '<h1>404 - Page Not Found!</h1>'
   ```
 
-- Serve static `.css` files
+- Serve the `404.html` page when there is no match
 
-
-**Requirements:**
+#### Requirements
 
 - you must create a `routers/` directory in `src/`
 
@@ -39,15 +42,14 @@ For this assignment, we will focus on creating the **express router** and the **
 
 - you must initialize the `express.Router()` in the 2 router files, export the routers in `module.exports`
   - for `pageRouter.js`
-    - `/` route should send the `home.html`
-    - `/about` route should send the `about.js`
+    - `/` route should send the simple string `<h1>HOME page</h1>`
+    - `/about` route should send the `<h1>ABOUT page</h1>`
   - for `apiRouter.js`
     - `/api/jobs` route should send _`jobsData`_
     - `/api/companies` route should send _`companiesData`_ (see below)
 
 - the routes must be imported in `server.js` and passed correctly to `app.use(....)`
 
-- you must use `express.static`  to serve static `.css` and `.js` files.
 
   ```js
   app.use(express.static(__dirname + '/public'));
@@ -63,17 +65,12 @@ In Terminal:
 cd ~/Documents/muktek/assignments/project--devjobs
 
 # (2) Commit your changes from the previous demo
-git commit -m 'committing work form 01'
+git commit -m 'committing work from part-01'
 
 # (3) You will work on the part-02-router branch for this feature
 git checkout -b part-02-router
 
-# (4) Download the public files and unzip them into `public/`
-curl https://raw.githubusercontent.com/muktek/assignment--fullstack-js-02-server-router/master/publicfiles.zip
-unzip publicfiles.zip -d ./public/
 
-# (5) Remove the zip files
-rm publicfiles.zip
 ```
 
 ## Extra
