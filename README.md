@@ -1,13 +1,13 @@
 # Full Stack JS Project
-**`fullstack-js-02-server-router`**
+**`fullstack-js-02-views-and-static-files`**
 
 
 ## Context
 You are going to build a full stack web application with node.js + React. In order to become familiar with how a node project works, you will be responsible for configuring the  initial major components of the project.  
 
 - express server
-- **application routes [this assignment]**
-- views
+- application routes
+- **views [this assignment]**
 - api layer
   - data access
   - data models (ORM)
@@ -15,45 +15,19 @@ You are going to build a full stack web application with node.js + React. In ord
 
 
 ## The Assignment
-For this assignment, we will focus on creating the **express router** and the **express views**.
-
-#### Overview
-
-- Configure the express router to serve the following routes:
-  ```
-  /                  : '<h1>HOME page</h1>'
-  /about             : '<h1>ABOUT Page</h1>'
-  /api/jobs          : json - jobsData
-  /api/companies     : json - companies
-
-  * No Match *       : '<h1>404 - Page Not Found!</h1>'
-  ```
-
-- Serve the `404.html` page when there is no match
+For this assignment, we will focus on creating the **views** and serving static files
 
 #### Requirements
 
-- you must create a `routers/` directory in `src/`
+- You will need to install EJS
 
-- you must create 2 router files in the `routers/` directory:
-  - `pageRouter.js`
-  - `apiRouter.js`
+- You will need to register the EJS view engine with express
 
-- you must initialize the `express.Router()` in the 2 router files, export the routers in `module.exports`
-  - for `pageRouter.js`
-    - `/` route should send the simple string `<h1>HOME page</h1>`
-    - `/about` route should send the `<h1>ABOUT page</h1>`
-  - for `apiRouter.js`
-    - `/api/jobs` route should send _`jobsData`_
-    - `/api/companies` route should send _`companiesData`_ (see below)
+- You will need to use `res.render()` to render the appropriate `.ejs` view inside the router
 
-- the routes must be imported in `server.js` and passed correctly to `app.use(....)`
+- You will need to serve static files (CSS files, JS files, and images) from the `/public` directory
 
-
-  ```js
-  app.use(express.static(__dirname + '/public'));
-  ```
-
+- You will need to correctly write the `<link>` to the styles file (located at `public/css/style.css`) in the `home.ejs`, `about.ejs`, and `404.ejs` files.
 
 ## Setup Instructions
 
@@ -64,68 +38,14 @@ In Terminal:
 cd ~/Documents/muktek/assignments/project--devjobs
 
 # (2) Commit your changes from the previous demo
-git commit -m 'committing work from part-01'
+git commit -m 'committing work from part-02'
 
-# (3) You will work on the part-02-router branch for this feature
-git checkout -b part-02-router
+# (3) You will work on the part-03-views branch for this feature
+git checkout -b part-03-views
+
+# (4) Download + unzip files into public/
+
+# (5) Download + unzip files into public/
 
 
-```
-
-## Extra
-
-#### `_jobsData_`
-```js
-[
-  {
-    title: 'SQL Server Administrator - Postgres',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination. User generated content in real-time will have multiple touchpoints for offshoring.',
-    location: 'Guadalajara',
-    salary: 27000,
-    fullTime: true,
-    companyId: 1
-  },
-  {
-    title: 'UX Engineer',
-    description: 'Override the digital divide with additional clickthroughs from DevOps. Leverage agile frameworks to provide a robust synopsis for high level overviews.',
-    location: 'Monterrey',
-    salary: 35000,
-    fullTime: true,
-    companyId: 1
-  },
-  {
-    title: 'API Architect',
-    description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services.',
-    location: 'Ciudad de Mexio',
-    salary: 39000,
-    fullTime: true,
-    companyId: 2
-  },
-  {
-    title: 'Mid-Level Front End Engineer',
-    description: 'Interactively coordinate proactive e-commerce via process-centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentialities.',
-    location: 'Ciudad de Mexico',
-    salary: 21000,
-    fullTime: false,
-    companyId: 2
-  }
-]
-```
-
-#### _`companiesData`_
-```js
-[
-  {
-    name: 'Company ABC',
-    description: 'Energistically network alternative technology deploying impactful partnerships.',
-    imageLink: 'http://www.tinygraphs.com/labs/isogrids/hexa16/nsuaio',
-    location: 'Guadalajara'
-  },
-  {
-    name: 'Lossless Enterprises',
-    description: 'Quickly strategizing team driven "outside the box" thinking.',
-    location: 'Ciudad de Mexico',
-    imageLink: 'http://www.tinygraphs.com/labs/isogrids/hexa16/8282',
-  }
-]
 ```
