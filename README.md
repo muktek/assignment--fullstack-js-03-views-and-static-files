@@ -5,7 +5,7 @@ You are going to build a full stack web application with node.js + React. In ord
 
 - express server
 - **application routes [this assignment]**
-- **views [this assignment]**
+- **views**
 - api layer
   - data access
   - data models (ORM)
@@ -15,17 +15,19 @@ You are going to build a full stack web application with node.js + React. In ord
 ## The Assignment
 For this assignment, we will focus on creating the **express router** and the **express views**.
 
-### Part A -- Router
-Configure the express router to serve the following routes:
+**Overview**
+- Configure the express router to serve the following routes:
+  ```
+  /                  : home.html
+  /about             : about.html
+  /api/jobs          : json - jobsData
+  /api/companies     : json - companies
 
-```
-/                  : home.html
-/about             : about.html
-/api/jobs          : json - jobsData
-/api/companies     : json - companies
+  * No Match *       : 404.html
+  ```
 
-* No Match *       : 404.html
-```
+- Serve static `.css` files
+
 
 **Requirements:**
 
@@ -67,14 +69,11 @@ git commit -m 'committing work form 01'
 git checkout -b part-02-router
 
 # (4) Download the public files and unzip them into `public/`
-curl ...
+curl https://raw.githubusercontent.com/muktek/assignment--fullstack-js-02-server-router/master/publicfiles.zip
 unzip publicfiles.zip -d ./public/
 
 # (5) Remove the zip files
-rm *.zip
-
-
-
+rm publicfiles.zip
 ```
 
 ## Extra
