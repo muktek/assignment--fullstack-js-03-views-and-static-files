@@ -1,7 +1,6 @@
 # Full Stack JS Project
-**DevJobs-02**
+**`fullstack-js-02-server-router`**
 
-**Express Router**
 
 ## Context
 You are going to build a full stack web application with node.js + React. In order to become familiar with how a node project works, you will be responsible for configuring the  initial major components of the project.  
