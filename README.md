@@ -54,4 +54,8 @@ curl https://raw.githubusercontent.com/muktek/assignment--fullstack-js-03-views-
 
 unzip viewfiles.zip -d ./src/views/
 
+# (6) Delete the zip files
+rm *.zip
+
+
 ```
