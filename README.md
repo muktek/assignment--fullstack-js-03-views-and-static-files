@@ -1,5 +1,5 @@
 # Full Stack JS Project
-**`fullstack-js-02-views-and-static-files`**
+**`fullstack-js-03-views-and-static-files`**
 
 
 ## Context
