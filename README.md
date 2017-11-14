@@ -44,7 +44,7 @@ git commit -m 'committing work from part-02'
 git checkout -b part-03-views
 
 # (4) Download + unzip files into public/
-curl https://raw.githubusercontent.com/muktek/assignment--fullstack-js-03-views-and-static-files/master/publicfiles.zip
+curl https://raw.githubusercontent.com/muktek/assignment--fullstack-js-03-views-and-static-files/master/publicfiles.zip > publicfiles.zip
 
 unzip publicfiles.zip -d ./public/
 
