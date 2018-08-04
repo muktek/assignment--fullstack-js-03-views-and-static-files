@@ -36,17 +36,17 @@ For this assignment, we will focus on creating the **views** and configuring our
 
 - When I navigate to the root path ('/' @ http://localhost:3000), I should see (the page content of `home.ejs` AND the css styles):
 
-  ![devjobs-home.png](devjobs-home.png)
+  ![devjobs-home.png](mockups/devjobs-home.png)
 
 
 - When I navigate to the root path ('/about' @ http://localhost:3000/about), I should see (the page content of `about.ejs` AND the css styles):
 
-  ![devjobs-about.png](devjobs-about.png)
+  ![devjobs-about.png](mockups/devjobs-about.png)
 
 
 - When I navigate to a route that does NOT exist (example: http://localhost:3000/oopsoops), I should see (the page content of `404.ejs` AND the css styles):
 
-  ![devjobs-404.png](devjobs-404.png)
+  ![devjobs-404.png](mockups/devjobs-404.png)
 
 
 
